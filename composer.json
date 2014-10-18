@@ -10,9 +10,8 @@
         "ext-mcrypt": "*"
     },
     "autoload": {
-        "psr-0": { "Adunsulag\\DoctrineEncryptBundle": "" }
-    },
-    "target-dir": "Adunsulag/DoctrineEncryptBundle",
+        "psr-4": { "Adunsulag\\DoctrineEncryptBundle": "" }
+    }
     "authors": [
         {
             "name": "Victor Melnik",
