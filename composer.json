@@ -12,7 +12,7 @@
     "autoload": {
         "psr-4": { "Adunsulag\\DoctrineEncryptBundle": "" }
     }
-    "authors": [
+    ,"authors": [
         {
             "name": "Victor Melnik",
             "email": "melnikvictorl@gmail.com"
