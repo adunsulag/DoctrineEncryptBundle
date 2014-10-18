@@ -1,5 +1,5 @@
 {
-    "name": "tdm/doctrine-encrypt-bundle",
+    "name": "adunsulag/doctrine-encrypt-bundle",
     "type": "library",
     "keywords": ["doctrine", "aes256", "encrypt", "decrypt"],
     "license": "MIT",
@@ -21,6 +21,10 @@
         {
             "name": "Westin Pigott",
             "email": "westin.pigott@techdata.com"
+        },
+        {
+            "name": "Stephen Nielson",
+            "email": "stephen@nielson.org"
         }
     ]
 }
