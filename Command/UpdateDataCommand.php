@@ -1,22 +1,22 @@
 <?php
 
-namespace TDM\DoctrineEncryptBundle\Command;
+namespace Adunsulag\DoctrineEncryptBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use TDMobility\SystemSettingsBundle\Interfaces\SettingsInterface;
+use Adunsulagobility\SystemSettingsBundle\Interfaces\SettingsInterface;
 use Symfony\Component\Yaml\Dumper;
 use Symfony\Component\Console\Formatter\OutputFormatterStyle;
 use Doctrine\Common\Persistence\ObjectManager;
 use \Exception;
 use \ReflectionProperty;
-use TDM\DoctrineEncryptBundle\Subscribers\AbstractDoctrineEncryptSubscriber as ADES;
-use TDM\DoctrineEncryptBundle\Configuration\Encrypted;
+use Adunsulag\DoctrineEncryptBundle\Subscribers\AbstractDoctrineEncryptSubscriber as ADES;
+use Adunsulag\DoctrineEncryptBundle\Configuration\Encrypted;
 use Doctrine\Common\Persistence\ObjectRepository;
-use TDM\DoctrineEncryptBundle\Interfaces\StandardizerInterface;
+use Adunsulag\DoctrineEncryptBundle\Interfaces\StandardizerInterface;
 
 /**
  * Description of UpdateDataCommand
@@ -51,7 +51,7 @@ class UpdateDataCommand extends ContainerAwareCommand {
      * @return StandardizerInterface
      */
     protected function getStandardizer() {
-        return $this->getContainer()->get('tdm_doctrine_encrypt.object_manager.standard');
+        return $this->getContainer()->get('adunsulag_doctrine_encrypt.object_manager.standard');
     }
 
     protected function getAnnotationReader() {

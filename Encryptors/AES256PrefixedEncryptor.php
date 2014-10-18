@@ -1,6 +1,6 @@
 <?php
 
-namespace TDM\DoctrineEncryptBundle\Encryptors;
+namespace Adunsulag\DoctrineEncryptBundle\Encryptors;
 
 /**
  * Class for AES-256 Prefixed encryption

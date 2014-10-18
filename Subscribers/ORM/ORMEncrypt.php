@@ -1,8 +1,8 @@
 <?php
 
-namespace TDM\DoctrineEncryptBundle\Subscribers\ORM;
+namespace Adunsulag\DoctrineEncryptBundle\Subscribers\ORM;
 
-use TDM\DoctrineEncryptBundle\Subscribers\AbstractORMDoctrineEncryptSubscriber;
+use Adunsulag\DoctrineEncryptBundle\Subscribers\AbstractORMDoctrineEncryptSubscriber;
 use Doctrine\ORM\Events;
 
 /**

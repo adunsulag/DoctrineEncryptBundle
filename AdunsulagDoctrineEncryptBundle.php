@@ -1,15 +1,15 @@
 <?php
 
-namespace TDM\DoctrineEncryptBundle;
+namespace Adunsulag\DoctrineEncryptBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
-use TDM\DoctrineEncryptBundle\DependencyInjection\TDMDoctrineEncryptExtension;
-use TDM\DoctrineEncryptBundle\DependencyInjection\Compiler\RegisterServiceCompilerPass;
+use Adunsulag\DoctrineEncryptBundle\DependencyInjection\AdunsulagDoctrineEncryptExtension;
+use Adunsulag\DoctrineEncryptBundle\DependencyInjection\Compiler\RegisterServiceCompilerPass;
 
 
-class TDMDoctrineEncryptBundle extends Bundle {
+class AdunsulagDoctrineEncryptBundle extends Bundle {
     
     public function build(ContainerBuilder $container) {
         parent::build($container);
@@ -18,6 +18,6 @@ class TDMDoctrineEncryptBundle extends Bundle {
     
     public function getContainerExtension()
     {
-        return new TDMDoctrineEncryptExtension();
+        return new AdunsulagDoctrineEncryptExtension();
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace TDM\DoctrineEncryptBundle\Subscribers\ODM;
+namespace Adunsulag\DoctrineEncryptBundle\Subscribers\ODM;
 
-use TDM\DoctrineEncryptBundle\Subscribers\AbstractODMDoctrineEncryptSubscriber;
+use Adunsulag\DoctrineEncryptBundle\Subscribers\AbstractODMDoctrineEncryptSubscriber;
 use Doctrine\ODM\MongoDB\Events;
 
 /**

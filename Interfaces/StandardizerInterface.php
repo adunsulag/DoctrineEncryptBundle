@@ -1,6 +1,6 @@
 <?php
 
-namespace TDM\DoctrineEncryptBundle\Interfaces;
+namespace Adunsulag\DoctrineEncryptBundle\Interfaces;
 
 use Doctrine\Common\Persistence\ObjectManager;
 

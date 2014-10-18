@@ -1,9 +1,9 @@
 <?php
 
-namespace TDM\DoctrineEncryptBundle\Subscribers;
+namespace Adunsulag\DoctrineEncryptBundle\Subscribers;
 
-use TDM\DoctrineEncryptBundle\Subscribers\AbstractDoctrineEncryptSubscriber;
-use TDM\DoctrineEncryptBundle\Configuration\Encrypted;
+use Adunsulag\DoctrineEncryptBundle\Subscribers\AbstractDoctrineEncryptSubscriber;
+use Adunsulag\DoctrineEncryptBundle\Configuration\Encrypted;
 use Doctrine\ODM\MongoDB\Event\LifecycleEventArgs;
 use Doctrine\ODM\MongoDB\Event\PreUpdateEventArgs;
 use \ReflectionClass;

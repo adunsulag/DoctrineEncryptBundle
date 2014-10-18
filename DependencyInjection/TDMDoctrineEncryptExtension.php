@@ -1,6 +1,6 @@
 <?php
 
-namespace TDM\DoctrineEncryptBundle\DependencyInjection;
+namespace Adunsulag\DoctrineEncryptBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\Definition;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class TDMDoctrineEncryptExtension extends Extension {
+class AdunsulagDoctrineEncryptExtension extends Extension {
 
     /**
      * {@inheritDoc}
@@ -49,10 +49,10 @@ class TDMDoctrineEncryptExtension extends Extension {
             $config['encrypted_prefix'] = Configuration::defaultPrefix;
         }
 
-        $container->setParameter('tdm_doctrine_encrypt.secret_key', $config['secret_key']);
-        $container->setParameter('tdm_doctrine_encrypt.system_salt', $config['system_salt']);
-        $container->setParameter('tdm_doctrine_encrypt.encryptor_service', $config['encryptor_service']);
-        $container->setParameter('tdm_doctrine_encrypt.encrypted_prefix', $config['encrypted_prefix']);
+        $container->setParameter('adunsulag_doctrine_encrypt.secret_key', $config['secret_key']);
+        $container->setParameter('adunsulag_doctrine_encrypt.system_salt', $config['system_salt']);
+        $container->setParameter('adunsulag_doctrine_encrypt.encryptor_service', $config['encryptor_service']);
+        $container->setParameter('adunsulag_doctrine_encrypt.encrypted_prefix', $config['encrypted_prefix']);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load(sprintf('%s.xml', $services[$config['db_driver']]));
@@ -64,7 +64,7 @@ class TDMDoctrineEncryptExtension extends Extension {
     }
 
     public function getAlias() {
-        return 'tdm_doctrine_encrypt';
+        return 'adunsulag_doctrine_encrypt';
     }
 
 }

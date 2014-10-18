@@ -1,8 +1,8 @@
 <?php
 
-namespace TDM\DoctrineEncryptBundle\Subscribers;
+namespace Adunsulag\DoctrineEncryptBundle\Subscribers;
 
-use TDM\DoctrineEncryptBundle\Subscribers\AbstractDoctrineEncryptSubscriber;
+use Adunsulag\DoctrineEncryptBundle\Subscribers\AbstractDoctrineEncryptSubscriber;
 use Doctrine\ORM\Events;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;

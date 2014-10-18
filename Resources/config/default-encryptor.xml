@@ -6,7 +6,7 @@
         
     <services>
         <!-- Default encryption service -->    
-        <service id="tdm_doctrine_encrypt.encryptor.default" class="TDM\DoctrineEncryptBundle\Encryptors\AES256PrefixedEncryptor" public="true">
+        <service id="adunsulag_doctrine_encrypt.encryptor.default" class="Adunsulag\DoctrineEncryptBundle\Encryptors\AES256PrefixedEncryptor" public="true">
         </service>        
     </services>
 </container>
