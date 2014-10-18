@@ -10,7 +10,7 @@
         "ext-mcrypt": "*"
     },
     "autoload": {
-        "psr-4": { "Adunsulag\\DoctrineEncryptBundle": "" }
+        "psr-4": { "Adunsulag\\DoctrineEncryptBundle\\": "" }
     }
     ,"authors": [
         {
