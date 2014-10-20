@@ -4,6 +4,7 @@ namespace Adunsulag\DoctrineEncryptBundle\Command;
 
 use Adunsulag\DoctrineEncryptBundle\Interfaces\StandardizerInterface;
 use Doctrine\ORM\EntityManager;
+use Adunsulag\DoctrineEncryptBundle\Interfaces\EncryptionMigratable;
 
 /**
  * Description of ODMOM
@@ -26,10 +27,11 @@ class ORMOM implements StandardizerInterface {
         return $this->objectManager;
     }
     
-    public function scheduleObjectForUpdate($object) {
+    public function scheduleObjectForUpdate(EncryptionMigratable $object) {
         // A hackish way to force the object to be flagged as 
         // updated (so it triggers the events) when it really is not.
-        $this->getObjectManager()->getUnitOfWork()->setOriginalEntityData($object, array('__encrypt_version'=>'1'));        
+        $object->setEncryptionVersion(1);
+//        $this->getObjectManager()->getUnitOfWork()->setOriginalEntityData($object, array('__encrypt_version'=>'1'));        
     }
 
 }
