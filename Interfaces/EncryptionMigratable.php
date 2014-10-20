@@ -9,7 +9,7 @@ namespace Adunsulag\DoctrineEncryptBundle\Interfaces;
  */
 interface EncryptionMigratable {
     
-    public function setEncryptionVersion();
+    public function setEncryptionVersion($version);
     
-    public function getEncryptionVersion($version);
+    public function getEncryptionVersion();
 }
