@@ -15,5 +15,5 @@ interface StandardizerInterface {
      */
     public function getObjectManager();
 
-    public function scheduleObjectForUpdate($object);
+    public function scheduleObjectForUpdate(EncryptionMigratable $object);
 }
