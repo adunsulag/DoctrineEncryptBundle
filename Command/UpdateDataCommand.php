@@ -96,6 +96,9 @@ class UpdateDataCommand extends ContainerAwareCommand {
     protected function processRepository(ObjectRepository $repository, InputInterface $input, OutputInterface $output) {
         $standardizer = $this->getStandardizer();
 
+        // TODO: flush and clear removes ALL the entities from the dataset so only
+        // the first 50 items are actually updated... removing the inner flush and clear fixes this
+        // however, it can create memory and speed issues...
         $objects = $repository->findAll();
         $output->writeln('Total Objects: ' . count($objects));
         $output->write('Processed: ');
@@ -105,7 +108,7 @@ class UpdateDataCommand extends ContainerAwareCommand {
             $standardizer->scheduleObjectForUpdate($object);
             $count++;
             if (($count % 50) == 0) {
-                $this->flushAndClear();
+//                $this->flushAndClear();
                 $output->write($count . ' | ');
             }
         }
@@ -114,8 +117,8 @@ class UpdateDataCommand extends ContainerAwareCommand {
     }
 
     protected function flushAndClear() {
-        $this->getObjectManager()->flush();
-        $this->getObjectManager()->clear();
+//        $this->getObjectManager()->flush();
+//        $this->getObjectManager()->clear();
     }
 
     protected function execute(InputInterface $input, OutputInterface $output) {
