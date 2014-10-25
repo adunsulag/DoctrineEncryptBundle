@@ -4,12 +4,8 @@ namespace Adunsulag\DoctrineEncryptBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Adunsulagobility\SystemSettingsBundle\Interfaces\SettingsInterface;
-use Symfony\Component\Yaml\Dumper;
-use Symfony\Component\Console\Formatter\OutputFormatterStyle;
 use Doctrine\Common\Persistence\ObjectManager;
 use \Exception;
 use \ReflectionProperty;
