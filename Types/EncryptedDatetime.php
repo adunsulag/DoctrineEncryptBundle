@@ -26,7 +26,7 @@ class EncryptedDatetime extends Type {
     }
     
     /**
-     * Converts the text string to a valid Datetime object
+     * Converts the text string to a valid Datetime object. Decrypting it in the process
      * @param type $value
      * @param \Adunsulag\DoctrineEncryptBundle\Types\AbstractPlatform $platform
      * @return \DateTime
@@ -39,7 +39,7 @@ class EncryptedDatetime extends Type {
         }
     }
 
-    public function convertToDatabaseValue(\DateTime $value, AbstractPlatform $platform)
+    public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
         // This is executed when the value is written to the database. Make your conversions here, optionally using the $platform.
         return $value->format("Y-m-d H:i:s");

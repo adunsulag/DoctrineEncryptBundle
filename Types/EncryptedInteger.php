@@ -14,7 +14,7 @@ use Doctrine\DBAL\Platforms\AbstractPlatform;
  *
  * @author snielson
  */
-class EncryptedDatetime extends Type {
+class EncryptedInteger extends Type {
     
     const MYTYPE = 'encrypted_integer'; // modify to match your type name
     
@@ -40,7 +40,7 @@ class EncryptedDatetime extends Type {
         return 0;
     }
 
-    public function convertToDatabaseValue(\DateTime $value, AbstractPlatform $platform)
+    public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
         // This is executed when the value is written to the database. Make your conversions here, optionally using the $platform.
         return $value + "";
